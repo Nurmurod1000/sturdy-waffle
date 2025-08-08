@@ -1,0 +1,99 @@
+//using System;
+//using System.Data;
+//using System.Data.SqlClient;
+
+//class Program
+//{
+//    public static void Main()
+//    {
+//        string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=row;Trusted_Connection=True;";
+//        using (SqlConnection conn = new SqlConnection(connectionString))
+//        {
+//            string query = "SELECT * FROM Odam";
+//            SqlDataAdapter ad = new SqlDataAdapter(query, conn);
+
+//            SqlCommandBuilder builder = new SqlCommandBuilder(ad);
+
+//            DataTable tab = new DataTable();
+
+//            ad.Fill(tab); 
+//            DataRow[] toDelete = tab.Select("id = 2");
+//            if (toDelete.Length > 0)
+//            {
+//                toDelete[0].Delete();
+//                ad.Update(tab);
+//                Console.WriteLine("Delete qilindi");
+//            }
+//        }
+//    }
+//}
+
+//-------------------------------------------------
+
+//using System;
+//using System.Data;
+//using System.Data.SqlClient;
+
+//class Program
+//{
+//    public static void Main()
+//    {
+//        string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=row;Trusted_Connection=True;";
+//        using (SqlConnection conn = new SqlConnection(connectionString))
+//        {
+//            string query = "SELECT * FROM Odam";
+//            SqlDataAdapter ad = new SqlDataAdapter(query, conn);
+
+//            SqlCommandBuilder builder = new SqlCommandBuilder(ad);
+
+//            DataTable tab = new DataTable();
+
+//            ad.Fill(tab);
+//            DataRow[] rows = tab.Select("id = 2");
+//            if (rows.Length > 0)
+//            {
+//                rows[0]["yosh"] = 73;
+//                ad.Update(tab);
+//                Console.WriteLine("Update qilindi ");
+//            }
+//        }
+//    }
+//}
+
+
+
+
+//--------------------------------------------------------------
+
+
+
+//using System;
+//using System.Data;
+//using System.Data.SqlClient;
+
+//class Program
+//{
+//    public static void Main()
+//    {
+//        string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=row;Trusted_Connection=True;";
+//        using (SqlConnection conn = new SqlConnection(connectionString))
+//        {
+//            string query = "SELECT * FROM Odam";
+//            SqlDataAdapter ad = new SqlDataAdapter(query, conn);
+
+//            SqlCommandBuilder builder = new SqlCommandBuilder(ad);
+
+//            DataTable tab = new DataTable();
+
+//            ad.Fill(tab);
+
+//            DataRow newRow = tab.NewRow();
+//            newRow["ism"] = "hbakhsd";
+//            newRow["yosh"] = 12;
+//            tab.Rows.Add(newRow);
+//            ad.Update(tab);
+//            Console.WriteLine("Qoshildi");
+//        }
+//    }
+//}
+
